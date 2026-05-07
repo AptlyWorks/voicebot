@@ -126,9 +126,6 @@ def main():
         if (audio.duration_seconds > 0) and (st.session_state["check_reset"] == False): # 녹음을 실행하면?
             # 음성 재생
             st.audio(audio.export().read())
-        if (audio.duration_seconds > 0) and (st.session_state["check_reset"]==False):
-            # 음성 재생
-            st.audio(audio.export().read())
             # 음원 파일에서 텍스트 추출
             question = STT(audio, st.session_state["OPENAI_API"])
 
